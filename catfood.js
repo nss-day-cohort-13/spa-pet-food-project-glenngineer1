@@ -14,31 +14,35 @@ function executeThisCodeAfterFileIsLoaded () {
 
   for(currentFood in data.cat_brands) {
     var catFoodData = "";
-//     var volumes;
+    var breedOfCat;
+    var types;
+    var volumes;
+    // var types;
     var cat = data.cat_brands[currentFood];
     catFoodData += "<div class='cat-block'>";
-    catFoodData += "<div>";
-    catFoodData += cat.name;
+    catFoodData += "<div class='cat-brand'>";
+    catFoodData += "Brand: " + cat.name;
     catFoodData += "</div>";
-    catFoodData += "<div>";
-    catFoodData += cat.breeds[i].breed;
-    catFoodData += "</div>";
-    catFoodData += "<div>";
-//     for (i = 0; i < dog.types.length; i++) {
-//       volumes = dog.types[i].volumes;
-//       dogFoodData += "<p>" + dog.types[i].type + "</p>";
-//     for (j = 0; j < volumes.length; j++) {
-//       var name = volumes[j].name;
-//       var price = volumes[j].price;
-//       dogFoodData += "<p>" + name + ": " + price + "</p>";
-//     }
-// }
 
-    catFoodData += "</div>";
-    catFoodData += "</div>";
+    for (k = 0; k < cat.breeds.length; k++) {
+      breedOfCat = cat.breeds[i].types;
+      catFoodData += "<p class='cat-breed'>" + "Breed: " + cat.breeds[k].breed + "</p>";
+
+    for (l = 0; l < breedOfCat.length; l++) {
+      volumes = breedOfCat[l].volumes;
+      catFoodData += "<p class='cat-type'>" + "Style: " + breedOfCat[l].type + "</p>";
+
+    for (m = 0; m < volumes.length; m++) {
+      var name = volumes[m].name;
+      var price = volumes[m].price;
+      catFoodData += "<p class='cat-volume'>" + "Size/Price: " + name + ": " + price + "</p>";
+    }
+  }
+}
 
     catFoodList.innerHTML += catFoodData;
   }
+  catFoodData += "</div>";
 }
 
 var myRequest = new XMLHttpRequest();

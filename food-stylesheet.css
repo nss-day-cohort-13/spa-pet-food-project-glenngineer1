@@ -1,0 +1,58 @@
+/*DOG STYLING*/
+
+#dog-block {
+  border: 2px solid black;
+  padding: 20px;
+  display: inline-block;
+  width: 40%;
+}
+
+.dog-brand {
+  border: 2px solid black;
+  padding: 10px;
+  background-color: orange;
+}
+
+.dog-style {
+  border: 2px solid black;
+  padding: 10px;
+  background-color: lightblue;
+}
+
+.dog-volume {
+  padding: 10px;
+  background-color: lightyellow;
+}
+
+/*CAT STYLING*/
+
+.cat-block {
+  border: 2px solid black;
+  padding: 20px;
+  display: inline-block;
+  width: 40%;
+  float: left;
+}
+
+.cat-brand {
+  border: 2px solid black;
+  padding: 10px;
+  background-color: orange;
+}
+
+.cat-breed {
+  border: 2px solid black;
+  padding: 10px;
+  background-color: lightblue;
+}
+
+.cat-type {
+  border: 2px solid black;
+  padding: 10px;
+  background-color: #888;
+}
+
+.cat-volume {
+  padding: 10px;
+  background-color: lightyellow;
+}

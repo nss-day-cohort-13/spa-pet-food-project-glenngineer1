@@ -16,23 +16,24 @@ function executeThisCodeAfterFileIsLoaded () {
     var dogFoodData = "";
     var volumes;
     var dog = data.dog_brands[currentFood];
-    dogFoodData += "<div class='dog-block'>";
-    dogFoodData += "<div>";
-    dogFoodData += dog.name;
+    dogFoodData += "<div id='dog-block'>";
+    dogFoodData += "<div class='dog-brand'>";
+    dogFoodData += "Brand: " + dog.name;
     dogFoodData += "</div>";
-    dogFoodData += "<div>";
+
     for (i = 0; i < dog.types.length; i++) {
       volumes = dog.types[i].volumes;
-      dogFoodData += "<p>" + dog.types[i].type + "</p>";
+      dogFoodData += "<p class='dog-style'>" + "Style: " + dog.types[i].type + "</p>";
+
     for (j = 0; j < volumes.length; j++) {
       var name = volumes[j].name;
       var price = volumes[j].price;
-      dogFoodData += "<p>" + name + ": " + price + "</p>";
+      dogFoodData += "<p class='dog-volume'>" + "Size/Price: " + name + ": " + price + "</p>";
+
     }
 }
+    dogFoodData += "</div>";
 
-    dogFoodData += "</div>";
-    dogFoodData += "</div>";
 
     dogFoodList.innerHTML += dogFoodData;
   }
